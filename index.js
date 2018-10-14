@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var PORT = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
     res.send("Hi there, welcome to my assignment!");
@@ -26,6 +27,6 @@ app.get('*', function(req, res) {
     res.send("Sorry, page not found... What are you doing with your life?");
 });
 
-app.listen(process.env.PORT, process.env.IP, function() {
+app.listen(PORT, process.env.IP, function() {
    console.log("Server has started."); 
 });
